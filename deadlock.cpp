@@ -28,11 +28,9 @@ scanf("%d",&r);
 printf("Enter the Max Matrix:\n");
 for(i=0;i<n;i++)
 {
-for(j=0;j<r;j++)
-{
+for(j=0;j<r;j++){
 scanf("%d",&max[i][j]);
-}
-}
+}}
 printf("Enter the Allocation Matrix\n");
 for(i=0;i<n;i++)
 {
@@ -40,7 +38,6 @@ for(j=0;j<r;j++)
 {
 scanf("%d",&alloc[i][j]);
 }
-
 }
 printf("Enter the available Resources\n");
 for(j=0;j<r;j++)
@@ -68,10 +65,8 @@ printf("\t");
 if(i==0)
 {
 for(j=0;j<r;j++)
-printf("%d ",avail[j]);
-}
-}
-}
+printf("%d ",avail[j]);}
+}}
 void cal()
 {
 int finish[100],temp,need[100][100],flag=1,k,c1=0;
@@ -84,7 +79,6 @@ finish[i]=0;
 for(i=0;i<n;i++)
 {
 for(j=0;j<r;j++)
-
 {
 need[i][j]=max[i][j]-alloc[i][j];
 }
@@ -113,12 +107,7 @@ printf("P%d->",i);
 if(finish[i]==1)
 {
 i=n;
-}
-}
-}
-}
-}
-}
+}}}}}}
 for(i=0;i<n;i++)
 {
 if(finish[i]==1)
@@ -138,5 +127,4 @@ else
 {
 printf("\n Process are in dead lock");
 printf("\n System is in unsafe state");
-}
-}
+}}
