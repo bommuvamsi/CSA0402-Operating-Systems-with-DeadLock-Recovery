@@ -26,8 +26,7 @@ int main()
             {
                 short_p=i;
             }
-        }
-        
+        }      
         a[short_p].BT=a[short_p].BT-1;
         
         if(a[short_p].BT==0)
@@ -37,19 +36,14 @@ int main()
             a[short_p].TAT=t+1-a[short_p].AT;
             total_WT=total_WT+a[short_p].WT;
             total_TAT=total_TAT+a[short_p].TAT;       
-        }
-    }
-    
+        }  }    
     Avg_WT=total_WT/n;
     Avg_TAT=total_TAT/n;
     printf("ID WT TAT\n");
     for(int i=0;i<n;i++)
     {
         printf("%d %d\t%d\n",i+1,a[i].WT,a[i].TAT);
-    }
-    
+    } 
     printf("Avg waiting time of the process  is %f\n",Avg_WT);
     printf("Avg turn around time of the process is %f\n",Avg_TAT);
-    
-    return 0;
-}
+      return 0;}
