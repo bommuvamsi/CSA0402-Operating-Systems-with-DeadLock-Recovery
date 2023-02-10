@@ -1,11 +1,8 @@
 #include<stdio.h>
 struct process
-{
-    int WT,AT,BT,TAT,PT;
+{ int WT,AT,BT,TAT,PT;
 };
-
 struct process a[10];
-
 int main()
 {
     int n,temp[10],t,count=0,short_p;
@@ -16,14 +13,10 @@ int main()
     printf("AT BT PT\n");
     for(int i=0;i<n;i++)
     {
-        scanf("%d%d%d",&a[i].AT,&a[i].BT,&a[i].PT);
-        
-        
+        scanf("%d%d%d",&a[i].AT,&a[i].BT,&a[i].PT);    
         temp[i]=a[i].BT;
-    }
-    
-    a[9].PT=10000;
-    
+    } 
+    a[9].PT=10000; 
     for(t=0;count!=n;t++)
     {
         short_p=9;
@@ -43,8 +36,7 @@ int main()
             a[short_p].WT=t+1-a[short_p].AT-temp[short_p];
             a[short_p].TAT=t+1-a[short_p].AT;
             total_WT=total_WT+a[short_p].WT;
-            total_TAT=total_TAT+a[short_p].TAT;
-            
+            total_TAT=total_TAT+a[short_p].TAT;       
         }
     }
     
