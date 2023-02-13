@@ -2,11 +2,15 @@
 int main() 
 { 
 int A[100][4]; 
-int i, j, n, total = 0, index, temp; float avg_wt, avg_tat; 
-printf("Enter number of process: "); scanf("%d", &n); 
+int i, j, n, total = 0, index, temp; 
+float avg_wt, avg_tat; 
+printf("Enter number of process: "); 
+scanf("%d", &n); 
 printf("Enter Burst Time:\n"); 
  for (i = 0; i < n; i++) { 
-printf("P%d: ", i + 1); scanf("%d", &A[i][1]); A[i][0] = i + 1; 
+printf("P%d: ", i + 1);
+  scanf("%d", &A[i][1]);
+  A[i][0] = i + 1; 
 } 
 for (i = 0; i < n; i++) { 
 index = i; 
